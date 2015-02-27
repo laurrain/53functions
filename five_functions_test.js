@@ -1,33 +1,33 @@
-TestMyCode.run("testing hello function", function(assert){
+QUnit.test("testing hello function", function(assert){
     var result = hello();
-    assert.equals("hello world", result);
+    assert.equal(result, "hello world", "We are expecting 'hello world'");
   
 });
 
-TestMyCode.run("testing hello_uppercase function", function(assert){
-
-    assert.equals("Hello,LAURRAIN!", hello_uppercase("Laurrain"));
+QUnit.test("testing hello_uppercase function", function(assert){
+   var result = hello_uppercase("Laurrain");
+    assert.equal(result, "hello,LAURRAIN!", "we are expecting the name in uppercase");
   
 });
 
-TestMyCode.run("testing hello_joe function", function(assert){
+QUnit.test("testing hello_joe function", function(assert){
 if(assert){
-    assert.equals("Hello!", hello_joe("Bob"));
-    assert.equals("Hello!", hello_joe("Joe"));
+    assert.equal(hello_joe("Bob"), "Hello!", "We are expecting Hello,");
+    assert.equal(hello_joe("Joe"), "Hello!", "We are expecting Hello,");
 }else if(assert){
-    assert.equals("Hello, LAURRAIN!", hello_joe("LAURRAIN"))
+    assert.equal(hello_joe("LAURRAIN" ),"Hello, LAURRAIN!", "We are xpecting Hello, LAURRAIN" );
   }
 });
 
-TestMyCode.run("testing number_list function", function(assert){
+QUnit.test("testing number_list function", function(assert){
 
-    assert.equals("1,2,3,4,5,6,7,8,9,10", number_list(10));
+    assert.equal(number_list(10), "1,2,3,4,5,6,7,8,9,10");
   
 });
 
-TestMyCode.run("testing sum of a list function", function(assert){
+QUnit.test("testing sum of a list function", function(assert){
 
-    assert.equals("1,3,6,10,15,21,28,36", sum_numbers(8));
+    assert.equal(sum_numbers(8), "1,3,6,10,15,21,28,36");
   
 });
 
