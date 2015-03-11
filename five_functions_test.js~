@@ -54,18 +54,3 @@ QUnit.test("testing string number", function(assert){
     assert.equal(hello_list(10), "hello world");
   
 });
-
-QUnit.test("testing high and low numbers", function(assert){
-    assert.deepEqual(high_low([100,13,3,6]), [3, 100]);
- 
-});
-
-QUnit.test("testing number of words in a sentence", function(assert){
-    assert.deepEqual(count_words("see how He love us"), 5);
- 
-});
-
-QUnit.test("testing the longest word in a sentence", function(assert){
-    assert.deepEqual(longest_word("see  how He love us"), 4);
- 
-});
