@@ -27,7 +27,7 @@ QUnit.test("testing number_list function", function(assert){
 
 QUnit.test("testing sum of a list function", function(assert){
 
-    assert.equal(sum_numbers(8), "1,3,6,10,15,21,28,36");
+    assert.equal(sum_numbers(8), "1,3,6,10,15,21,28,36","Expecting sum equal 8");
   
 });
 
@@ -51,21 +51,40 @@ QUnit.test("testing reverse string", function(assert){
 
 QUnit.test("testing string number", function(assert){
 
-    assert.equal(hello_list(10), "hello world");
+    assert.equal(hello_list(10), "hello world","expecting sum number string equal 10");
   
 });
 
 QUnit.test("testing high and low numbers", function(assert){
-    assert.deepEqual(high_low([100,13,3,6]), [3, 100]);
+    assert.deepEqual(high_low([100,13,3,6]), [3, 100], "Expecting 3 and 10");
  
 });
 
 QUnit.test("testing number of words in a sentence", function(assert){
-    assert.deepEqual(count_words("see how He love us"), 5);
+    assert.deepEqual(count_words("see how He love us"), 5, "Expecting 5");
  
 });
 
 QUnit.test("testing the longest word in a sentence", function(assert){
-    assert.deepEqual(longest_word("see  how He love us"), 4);
+    assert.deepEqual(longest_word("see  how He love us"),"love4", "expected love 4");
+ 
+});
+
+QUnit.test("testing the length a sentence return the average word length rounded up&down", function(assert){
+    assert.deepEqual(word_length("see how He love us!"), [0,1]);
+ 
+});
+
+QUnit.test("testing the length a sentence return the average word length rounded up", function(assert){
+    assert.deepEqual(avg("see how He love us!"), 1);
+});
+
+QUnit.test("takes a sentence as a parameter and return the letter most words starts with", function(assert){
+    assert.deepEqual(start("see how he love us to see his greatfullness!"), "H");
+ 
+});
+
+QUnit.test("takes a sentence as a parameter and return the letter most words end with", function(assert){
+    assert.deepEqual(ends("see how he love us to see his greatfullness!"), "E");
  
 });

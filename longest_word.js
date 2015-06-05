@@ -7,5 +7,5 @@ var longest_word = function(sentence){
 			longer_word = words[i];
 		}
 	};
-	return longer_word.length;
+	return (longer_word + ''+longer_word.length);
 }
